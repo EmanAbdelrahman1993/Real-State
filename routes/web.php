@@ -29,8 +29,12 @@ Route::group(['middleware' => 'admin'], function () {
 Route::group(['middleware' => 'auth'], function () {
     Route::get('user/routes', 'HomeController@user');
     Route::get('property_show/{id}','UserController@show');
+    Route::get('wishlist/add/{id}', 'UserController@add_to_wishlist');
+    Route::get('wishlist_view', 'UserController@view_wishlist');
 
-   // Route::get('Area', 'AreaController');
+
+
+    // Route::get('Area', 'AreaController');
 
 });
 

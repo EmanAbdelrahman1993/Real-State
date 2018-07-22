@@ -22,6 +22,9 @@
                             <p class="pad_bot2">{{$property->description}}</p>
 
 
+                            <a href="{{url('wishlist/add/'.$property->id)}}" class="btn btn-success">Add To Wishlist <i class="fa fa-heart"></i></a>
+
+
                         </div>
 
                     </article>
