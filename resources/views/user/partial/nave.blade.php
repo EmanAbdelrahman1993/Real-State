@@ -1,6 +1,6 @@
 <!-- header -->
     <header>
-      <h1><a href="index.html" id="logo"></a></h1>
+      <h1><a href="{{url('user/routes')}}" id="logo"></a></h1>
       <div class="wrapper">
         <ul id="icons">
           <li><a href="#" class="normaltip"><img src="/frontend-design/images/icon1.jpg" alt=""></a></li>

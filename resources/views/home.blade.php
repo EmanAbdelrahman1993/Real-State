@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('user.authpage')
 @section('content')
     <div class="container">
         @if(\Session::has('error'))
@@ -13,7 +13,7 @@
                 <div class="panel-heading">
 				
                 <div class="panel-body">
-                    <a href="{{url('admin/routes')}}">Admin</a>
+                    <a href="{{url('admin/routes')}}"><h2>Go To Admin Dashboard</h2></a>
                 </div>
 				</div>
 				</div>
@@ -24,7 +24,7 @@
                 <div class="panel-heading">
 				
                 <div class="panel-body">
-                    <a href="{{url('user/routes')}}">User</a>
+                    <a href="{{url('user/routes')}}"><h2>Go To Home Page</h2></a>
                 </div>
 				</div>
 				</div>

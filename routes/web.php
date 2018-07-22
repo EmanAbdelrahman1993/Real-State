@@ -28,8 +28,11 @@ Route::group(['middleware' => 'admin'], function () {
 
 Route::group(['middleware' => 'auth'], function () {
     Route::get('user/routes', 'HomeController@user');
+    Route::get('property_show/{id}','UserController@show');
+
    // Route::get('Area', 'AreaController');
-    Route::get('property_view', 'UserController@index');
+
 });
-Route::get('user/routes', 'HomeController@user');
+
+Route::get('property_view', 'UserController@index');
 

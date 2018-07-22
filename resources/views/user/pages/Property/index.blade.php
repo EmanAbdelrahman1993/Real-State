@@ -86,7 +86,8 @@
                                 <p class="pad_bot1"><strong class="color2">{{$property->name}}<br>
                                         Price: <span class="color1">{{$property->price}}</span></strong></p>
                                 <p class="pad_bot2">{{$property->description}}</p>
-                                <a href="{{url('Property/'.$property->id)}}" class="button">Read more</a>
+                                <a href="{{url('property_show/'.$property->id)}}" class="button">Show</a>
+
                             </div>
 
 
