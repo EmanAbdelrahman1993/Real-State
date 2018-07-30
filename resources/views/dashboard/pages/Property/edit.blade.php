@@ -64,6 +64,10 @@
                                     <label>Description</label>
                                     <textarea class="form-control" name="description" required>{{$property->description}}</textarea>
                                 </div>
+                                <div class="form-group col-md-6">
+                                    <label>Property Owner Phone</label>
+                                    <input type="number" class="form-control" name="phone" value="{{$property->phone}}" required>
+                                </div>
 
                                 <div class="form-group col-md-6">
                                     <label>Property Image</label>

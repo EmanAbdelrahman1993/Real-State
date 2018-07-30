@@ -30,6 +30,7 @@
                                 <td>Description</td>
                                 <td>Price</td>
                                 <td>Size</td>
+                                <td>Owner Phone</td>
                                 <td>rooms_no</td>
                                 <td>floors_no</td>
                                 <td>pathroom_no</td>
@@ -46,6 +47,7 @@
                                 <td> {{$property->description}}</td>
                                 <td> {{$property->price}}</td>
                                 <td>{{$property->size}}</td>
+                                <td> {{$property->phone}}</td>
                                 <td> {{$property->rooms_no}}</td>
                                 <td> {{$property->floors_no}}</td>
                                 <td>{{$property->pathroom_no}}</td>

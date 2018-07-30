@@ -17,7 +17,7 @@
             <a href="#">{{ Auth::user()->name }}</a>
           </li>
           <li>
-            <a href="{{ url('wishlist_view') }}">
+            <a href="{{ url('wishlist/view') }}">
               {{ __('View Your Wishlist') }}
             </a>
           </li>

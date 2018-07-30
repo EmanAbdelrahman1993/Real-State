@@ -27,6 +27,7 @@ class CreatePropertyTable extends Migration
             $table->integer('floors_no');
             $table->integer('pathroom_no');
             $table->string('image');
+            $table->bigInteger('phone');
             $table->timestamps();
         });
     }

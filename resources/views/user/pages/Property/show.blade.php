@@ -13,6 +13,7 @@
                             <p class="pad_bot1"><strong class="color2">{{$property->name}}<br>
                                     Price: <span class="color1">{{$property->price}}</span>-
                                     Size: <span class="color1">{{$property->size}}</span>-
+
                                     No of Bedrooms: <span class="color1">{{$property->rooms_no}}</span>-
                                     No of Pathroom: <span class="color1">{{$property->pathroom_no}}</span>-
                                     No of Floors: <span class="color1">{{$property->floors_no}}</span>-
@@ -23,6 +24,10 @@
 
 
                             <a href="{{url('wishlist/add/'.$property->id)}}" class="btn btn-success">Add To Wishlist <i class="fa fa-heart"></i></a>
+
+                            <a href="#" class="btn btn-info">Owner Phone: {{$property->phone}}<i class="fa fa-phone"></i>
+
+                                </a>
 
 
                         </div>

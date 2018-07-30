@@ -49,6 +49,7 @@ class PropertyController extends Controller
             'floors_no' => 'required',
             'pathroom_no' => 'required',
             'image' => 'required|image',
+            'phone' => 'required|min:11|max:15'
 
         ]);
 
@@ -75,7 +76,7 @@ class PropertyController extends Controller
 
             $property->image = $name;
         }
-
+        $property->phone= $request->phone;
         $area_name = $request->area_name;
 
         $row = Area::where('name' , $area_name)->first();
@@ -132,6 +133,7 @@ class PropertyController extends Controller
             'rooms_no' => 'required',
             'floors_no' => 'required',
             'pathroom_no' => 'required',
+            'phone' => 'required|min:11|max:15'
 
 
         ]);
@@ -157,12 +159,10 @@ class PropertyController extends Controller
             $property->image = $name;
         }
 
+        $property->phone= $request->phone;
         $area_name = $request->area_name;
-
         $row = Area::where('name' , $area_name)->first();
         $property->areas_id = $row->id;
-
-
         $property->save();
         session()->flash('success', 'Property Added Successfully');
         return redirect('Property');

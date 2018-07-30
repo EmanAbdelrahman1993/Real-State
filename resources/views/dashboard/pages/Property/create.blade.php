@@ -65,11 +65,16 @@
                                 </div>
 
 
+                                <div class="form-group col-md-6">
+                                    <label>Property Owner Phone</label>
+                                    <input type="number" class="form-control" name="phone" value="{{old('phone')}}" required>
+                                </div>
 
                                 <div class="form-group col-md-6">
                                     <label>Description</label>
                                     <textarea class="form-control" name="description" required>{{old('description')}}</textarea>
                                 </div>
+
 
                                 <div class="form-group col-md-6">
                                     <label>Select Area</label>
@@ -83,8 +88,9 @@
                                             <option>{{$area->name}}</option>
                                         @endforeach
                                     </select>
-
                                 </div>
+
+
 
 
 

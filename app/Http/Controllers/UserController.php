@@ -28,37 +28,42 @@ class UserController extends Controller
     public function add_to_wishlist(Request $request, $id)
     {
         $property= Property::find($id);
-
-
         $name = $property->name;
-
-
         $size = $property->size;
         $price= $property->price;
-
         $image = $property->image;
-
-
-        $data =[$property->id, $name ,$size , $price , $image];
+        $phone = $property->phone;
+        $data =[$property->id, $name ,$size , $price , $image , $phone];
         //dd($data);
-
-
         Session::push('wishlist', $data);
 
-
-        if (Session::has('wishlist')) {
-            // dd( Session::get('cart'));
-            foreach (Session::get('wishlist') as $wish) {
-                $wishes[] = $wish;
-            }
-        }
-
-        //dd($wishes);
-
-        return view('user.pages.wishlist',['wishes'=>$wishes]);
+//        dd( Session::get('wishlist'));
+        return redirect('wishlist/view');
 
     }
 
+    public function view_wishlist()
+    {
+        $user_id = auth()->user()->id;
+        //dd($user_id);
+        if (Session::has('wishlist')) {
+//             dd( Session::get('wishlist'));
+            foreach (Session::get('wishlist') as $wish) {
+
+
+//                dd($wish);
+                $wishlist[] = $wish;
+
+            }
+
+
+        }
+
+      //  dd($wishlist);
+
+        return view('user.pages.wishlist',['wishlist'=>$wishlist]);
+
+    }
 
 }
 
